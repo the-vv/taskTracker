@@ -11,13 +11,37 @@
 
 </head>
 
-<body class="uk-light">
+<body class="uk-light" x-data="configuration">
 
   <div class="uk-container pt-5">
     <h1 class="uk-text-center">Welcome to Task Tracker</h1>
     <p class="uk-text-center">
-      Please configure your tasks input fields
+      Please configure your tasks input fields below
     </p>
+    <hr class="uk-divider-icon">
+    <div uk-grid>
+      <div class="uk-width-expand">
+        <input class="uk-input uk-width-expand" type="text" placeholder="Input Name" aria-label="Input"
+          x-model="nameValue">
+      </div>
+      <div class="uk-width-auto">
+        <button class="uk-button uk-button-primary uk-width-auto" @click="addInputField">
+          Add Input
+          <span uk-icon="plus" class="ml-2"></span></button>
+      </div>
+    </div>
+    <div class="mt-5">
+      <template x-for="(name, index) in inputFields">
+        <div uk-grid class="shadow">
+          <div class="uk-width-expand">
+            <span x-text="name" class="uk-text-large"></span>
+          </div>
+          <div class="uk-width-auto">
+            <button class="uk-button uk-button-danger" @click="removeInputField(index)">Remove</button>
+          </div>
+        </div>
+      </template>
+    </div>
   </div>
 
 
@@ -26,6 +50,7 @@
   <script src="https://cdn.jsdelivr.net/npm/uikit@3.20.8/dist/js/uikit-icons.min.js"></script>
   <!-- Your app's source files -->
   <script src="js/main.js"></script>
+  <script src="js/configure.js"></script>
 </body>
 
 </html>
