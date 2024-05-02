@@ -3,9 +3,20 @@ updateNamesStorage = (key, value) => {
 
 document.addEventListener('alpine:init', () => {
     Alpine.data('configuration', () => ({
+        async init() {
+            // const names = await Neutralino.storage.getData('config').catch((e) => {
+            //     console.warn(e);
+            // })
+            // if (names) {
+            //     this.inputFields = names;
+            // } else {
+            //     this.inputFields = [];
+            //     Neutralino.storage.getKeys()
+            // }
+        },
         inputFields: [],
         nameValue: '',
-        addInputField() {
+        async addInputField() {
             if (!this.nameValue) {
                 return;
             }

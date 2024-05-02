@@ -6,6 +6,12 @@ function onWindowClose() {
 }
 
 // Initialize Neutralino
-Neutralino.init();
+Neutralino.init()
 
 Neutralino.events.on("windowClose", onWindowClose);
+
+
+(async () => {
+    console.log(await Neutralino.storage.getKeys())
+})();
+
