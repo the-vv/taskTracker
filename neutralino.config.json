@@ -49,16 +49,17 @@
       "resizable": true,
       "exitProcessOnClose": false,
       "nativeAllowList": [
-        "storage.*"
+        "app.*",
+        "os.*",
+        "storage.*",
+        "debug.log"
       ]
     },
     "browser": {
       "globalVariables": {
         "TEST": "Test value browser"
       },
-      "nativeBlockList": [
-        "filesystem.*"
-      ]
+      "nativeBlockList": []
     },
     "cloud": {
       "url": "/resources/#cloud",
@@ -71,10 +72,7 @@
       "width": 800,
       "height": 500,
       "args": "--user-agent=\"Neutralinojs chrome mode\"",
-      "nativeBlockList": [
-        "filesystem.*",
-        "os.*"
-      ]
+      "nativeBlockList": []
     }
   },
   "cli": {
