@@ -47,7 +47,10 @@
       "maximize": false,
       "hidden": false,
       "resizable": true,
-      "exitProcessOnClose": false
+      "exitProcessOnClose": false,
+      "nativeAllowList": [
+        "storage.*"
+      ]
     },
     "browser": {
       "globalVariables": {
@@ -60,7 +63,8 @@
     "cloud": {
       "url": "/resources/#cloud",
       "nativeAllowList": [
-        "app.*"
+        "app.*",
+        "storage.*"
       ]
     },
     "chrome": {
