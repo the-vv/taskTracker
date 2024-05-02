@@ -16,8 +16,7 @@
   "nativeAllowList": [
     "app.*",
     "os.*",
-    "storage.*",
-    "debug.log"
+    "storage.*"
   ],
   "globalVariables": {
     "TEST1": "Hello",
@@ -51,8 +50,7 @@
       "nativeAllowList": [
         "app.*",
         "os.*",
-        "storage.*",
-        "debug.log"
+        "storage.*"
       ]
     },
     "browser": {
@@ -65,6 +63,7 @@
       "url": "/resources/#cloud",
       "nativeAllowList": [
         "app.*",
+        "os.*",
         "storage.*"
       ]
     },
@@ -72,7 +71,12 @@
       "width": 800,
       "height": 500,
       "args": "--user-agent=\"Neutralinojs chrome mode\"",
-      "nativeBlockList": []
+      "nativeBlockList": [],
+      "nativeAllowList": [
+        "app.*",
+        "os.*",
+        "storage.*"
+      ]
     }
   },
   "cli": {
